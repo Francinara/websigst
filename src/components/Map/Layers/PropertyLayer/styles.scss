@@ -1,0 +1,47 @@
+.custom-popup .leaflet-popup-tip {
+  display: none; /* Remove a seta */
+}
+
+.custom-popup .leaflet-popup-content-wrapper {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.leaflet-popup-content-wrapper {
+  padding: 0; /* Remove o padding */
+  border-radius: 0; /* Opcional: remove bordas arredondadas */
+}
+
+/* Remove o padding interno do conteúdo */
+.leaflet-popup-content {
+  margin: 0; /* Remove margens extras */
+  padding: 0; /* Remove o padding */
+}
+
+/* Ajuste o alinhamento do texto */
+.leaflet-popup-content p {
+  margin: 0;
+  padding: 0; /* Remove o padding dos parágrafos */
+}
+
+.leaflet-popup-close-button {
+  // display: flex;
+}
+
+.leaflet-popup-close-button:hover {
+  transform: scale(1.1);
+}
+
+.buttonMoreDetails {
+  color: var(--green-700);
+  border: 1px solid #d1d5db;
+  padding: 8px;
+  border-radius: 4px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+  transition: background-color 0.2s;
+  &:hover {
+    background-color: var(--stone-100);
+  }
+}

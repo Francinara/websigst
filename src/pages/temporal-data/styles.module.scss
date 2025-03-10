@@ -1,0 +1,132 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.temporalDataContainer {
+  display: flex;
+  gap: 12px;
+  margin-top: 100px;
+  padding: 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.temporalDataNavbar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .option {
+    width: 176px;
+    border: 1px solid var(--stone-200);
+    background-color: var(--white);
+    border-radius: 6px;
+    padding: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--stone-50);
+    }
+  }
+
+  .active {
+    font-weight: bold;
+  }
+}
+
+.temporalDataContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1 1 0%;
+}
+
+.temporalDataSelect {
+  display: none;
+}
+
+.temporalDataSection {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid var(--stone-200);
+  border-radius: 6px;
+  background-color: var(--white);
+
+  header {
+    border-bottom: 1px solid var(--stone-200);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+
+    h1 {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  .content {
+    position: relative;
+    padding-left: 1.25rem /* 20px */;
+    padding-right: 1.25rem /* 20px */;
+  }
+}
+
+.activityOptions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.loadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  z-index: 1001;
+}
+
+.loaderCircle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 4px solid var(--green-700);
+  border-top-color: var(--stone-300);
+  animation: loader-circle 1s linear infinite;
+}
+
+@keyframes loader-circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 865px) {
+  .temporalDataNavbar {
+    display: none;
+  }
+  .temporalDataSelect {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .temporalDataSection {
+    header {
+      h1 {
+        font-size: 19px;
+      }
+    }
+  }
+}

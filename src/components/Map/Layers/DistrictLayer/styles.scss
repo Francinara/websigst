@@ -1,0 +1,12 @@
+.leaflet-tooltip {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: var(--stone-600);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.leaflet-tooltip:before {
+  display: none !important;
+}

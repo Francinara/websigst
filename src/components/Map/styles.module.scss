@@ -1,0 +1,42 @@
+.mapContainer {
+  height: 100%;
+  width: 100%;
+  padding-top: 100px;
+}
+
+.loadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  z-index: 1001;
+}
+
+.loaderCircle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 4px solid var(--green-700);
+  border-top-color: var(--stone-300);
+  animation: loader-circle 1s linear infinite;
+}
+
+@keyframes loader-circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-height: 330px) {
+  .mapContainer {
+    height: calc(100vh);
+  }
+}

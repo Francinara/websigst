@@ -1,0 +1,20 @@
+.mapContentContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  background-color: var(--white);
+  color: var(--stone-500);
+  border-left: 1px solid var(--stone-300);
+  border-right: 1px solid var(--stone-300);
+  border-top: 1px solid var(--stone-300);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+@media (max-height: 330px) {
+  .mapContentContainer {
+    display: none;
+  }
+}

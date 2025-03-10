@@ -1,0 +1,28 @@
+.LayersControlContainer {
+  display: flex;
+  gap: 4px;
+  padding: 0px 4px;
+}
+.select {
+  display: none;
+}
+
+.textButton {
+  padding: 4px;
+  border-radius: 4px;
+  &:hover {
+    background-color: var(--stone-100);
+  }
+}
+.activeTextButton {
+  background-color: var(--stone-100);
+}
+
+@media (max-width: 710px) {
+  .LayersControlContainer {
+    display: none;
+  }
+  .select {
+    display: block;
+  }
+}

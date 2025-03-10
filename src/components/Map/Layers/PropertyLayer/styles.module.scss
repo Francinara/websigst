@@ -1,0 +1,52 @@
+.customPopup {
+  padding: 8px;
+  color: var(--stone-500);
+
+  h3 {
+    margin-right: 16px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .infoContainer {
+    display: flex;
+    gap: 4px;
+    font-size: 12px;
+  }
+  .icon {
+    color: var(--green-700);
+  }
+
+  .detailsButton {
+    color: var(--green-700);
+    border: 1px solid var(--green-700);
+    border-radius: 4px;
+    width: 100%;
+    margin: 8px 0;
+    padding: 4px;
+    transition: background 0.2s;
+
+    &:hover {
+      background: var(--stone-100);
+    }
+  }
+
+  .propertiesSection {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    border-top: 2px dashed var(--stone-200);
+    padding-top: 8px;
+
+    .iconsContainer {
+      display: flex;
+      gap: 4px;
+    }
+
+    .areaContainer {
+      display: flex;
+      gap: 4px;
+    }
+  }
+}

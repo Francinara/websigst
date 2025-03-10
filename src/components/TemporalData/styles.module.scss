@@ -1,0 +1,315 @@
+.chartContainer {
+  width: 100%;
+  min-width: 280px;
+}
+
+.chartContainer {
+  width: 100%;
+  min-width: 100px;
+}
+
+.chartContainerFilter {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttonGroupContainer {
+  padding: 2px;
+  display: flex;
+  border-radius: 4px;
+  color: var(--stone-400);
+  background-color: var(--stone-50);
+  font-weight: 500;
+
+  .button {
+    padding: 4px 8px;
+    white-space: nowrap;
+  }
+
+  .buttonActive {
+    padding: 4px 8px;
+    color: var(--stone-500);
+    white-space: nowrap;
+    border-radius: 2px;
+    background-color: var(--white);
+  }
+}
+
+.filterSelectContainer {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+
+  label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    text-align: right;
+  }
+
+  .title {
+    padding: 0px 4px;
+    position: absolute;
+    left: 8px;
+    bottom: 28px;
+    font-size: 10px;
+    background-color: var(--white);
+  }
+
+  .yearRange {
+    padding: 8px;
+    border: 1px solid var(--stone-200);
+    border-radius: 4px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .yearRangeTitle {
+    padding: 0px 4px;
+    position: absolute;
+    bottom: 20px;
+    font-size: 10px;
+    background-color: var(--white);
+  }
+  .select {
+    border: 1px solid var(--stone-200);
+    border-radius: 4px;
+    padding: 8px;
+  }
+}
+
+.statisticPanelContainer {
+  margin: 12px 0px;
+  padding: 12px;
+  border: 1px solid var(--stone-200);
+  border-radius: 4px;
+  background-color: var(--white);
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: last baseline;
+    gap: 12px;
+  }
+
+  .metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .value {
+      font-size: 32px;
+      font-weight: 500;
+    }
+
+    .label {
+      text-align: center;
+    }
+    b {
+      font-weight: bold;
+    }
+  }
+}
+
+.chartSVGContainer {
+  display: flex;
+  gap: 12px;
+}
+
+.chartSVGContent {
+  border: 1px solid var(--stone-200);
+  border-radius: 4px;
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  background-color: var(--white);
+
+  .chartSVGTitle {
+    padding: 12px;
+
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .chartContainer {
+    width: 100%;
+
+    display: flex;
+  }
+
+  .chartSVGSection {
+    flex: 1 1 0%;
+
+    overflow: hidden;
+  }
+
+  .invisible {
+    max-width: 40px;
+    visibility: hidden;
+
+    flex: 1 1 0%;
+  }
+}
+
+.chartSVG {
+  margin-bottom: 12px;
+
+  .gridLine {
+    stroke: var(--stone-200);
+  }
+
+  .lineLabel {
+    font-size: 10px;
+    fill: var(--stone-500);
+    text-anchor: end;
+  }
+
+  .path {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    fill: none;
+    stroke-width: 2px;
+  }
+
+  .circle {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  .gridText {
+    text-anchor: middle;
+    font-size: 12px;
+    fill: var(--stone-500);
+  }
+}
+
+.lineChratLegendContainer {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-right: 8px;
+  align-items: center;
+
+  li {
+    text-align: left;
+    list-style-type: none;
+    margin-bottom: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    white-space: nowrap;
+
+    span {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+      transition: opacity 0.3s ease;
+    }
+    p {
+      white-space: nowrap;
+      transition: opacity 0.3s ease;
+    }
+  }
+}
+
+.StatisticsSummary {
+  border-radius: 4px;
+  padding: 12px;
+  border: 1px solid var(--stone-200);
+
+  background-color: var(--white);
+
+  .title {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .list {
+    padding-left: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    list-style-type: disc;
+  }
+}
+
+@media (max-width: 900px) {
+  .chartSVGContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1160px) {
+  .chartContainerFilter {
+    flex-direction: column;
+    align-items: start;
+  }
+  .filterSelectContainer {
+    width: 100%;
+    flex: 1 1 0%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 675px) {
+  .filterSelectContainer {
+    flex-direction: column;
+  }
+  .statisticPanelContainer {
+    .metric {
+      .value {
+        font-size: 26px;
+      }
+      .label {
+        font-size: 12px;
+      }
+    }
+  }
+}
+@media (max-width: 530px) {
+  .statisticPanelContainer {
+    .metric {
+      .value {
+        font-size: 24px;
+      }
+      .label {
+        font-size: 11px;
+      }
+    }
+  }
+}
+@media (max-width: 460px) {
+  .buttonGroupContainer {
+    font-size: 90%;
+  }
+}
+@media (max-width: 425px) {
+  .buttonGroupContainer {
+    font-size: 82%;
+  }
+}
+@media (max-width: 400px) {
+  .buttonGroupContainer {
+    font-size: 75%;
+  }
+}
+@media (max-width: 380px) {
+  .buttonGroupContainer {
+    font-size: 67%;
+  }
+}
+@media (max-width: 360px) {
+  .buttonGroupContainer {
+    font-size: 63%;
+  }
+}

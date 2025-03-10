@@ -1,0 +1,28 @@
+.contente {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.noProperties {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 12px;
+
+  h2 {
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  p {
+    margin-top: 8px;
+  }
+
+  .icon {
+    opacity: 0.3;
+  }
+}

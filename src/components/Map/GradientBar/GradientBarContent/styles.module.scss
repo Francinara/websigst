@@ -1,0 +1,54 @@
+.container {
+  position: absolute;
+  bottom: 18px;
+  right: -76px;
+}
+
+.gradientBar {
+  width: 14px;
+  height: 200px;
+  background: linear-gradient(
+    to top,
+    #440154,
+    #48186a,
+    #472d7b,
+    #3e4a89,
+    #31688e,
+    #26828e,
+    #1f9e89,
+    #35b779,
+    #6ece58,
+    #b5de2b,
+    #fde725
+  );
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.legendLabel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  justify-content: space-between;
+  height: 100%;
+  margin-left: -46px;
+  font-size: 12px;
+  padding: 1px 10px;
+  color: var(--stone-800);
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+@media (max-width: 500px) {
+  .container {
+    bottom: 60px;
+    right: -76px;
+  }
+}
+
+@media (max-height: 624px) {
+  .container {
+    display: none;
+  }
+}

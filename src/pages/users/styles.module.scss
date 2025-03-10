@@ -1,0 +1,156 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--white);
+}
+
+.header {
+  margin: 72px 12px 12px;
+  color: var(--green-700);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.navLink {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.titleSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.titleContainer {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
+}
+
+.tableContainer {
+  overflow-x: auto;
+
+  table {
+    width: 100%;
+  }
+}
+
+.tableHead {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background-color: var(--stone-50);
+  border-bottom: 2px solid var(--stone-200);
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.tableBody {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-bottom: 2px solid var(--stone-200);
+}
+
+.tableCellCheckBox {
+  width: 2.5rem;
+}
+.tableCellText {
+  width: 25%;
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tableCellDate {
+  width: 9rem;
+  text-wrap: nowrap;
+}
+
+.tableCellAccessLevel {
+  flex: 1 1 0%;
+  min-width: 12rem;
+
+  select {
+    width: 60%;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--stone-200);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+}
+
+.tableCellActions {
+  background-color: var(--white);
+  width: 8rem;
+  text-wrap: nowrap;
+  position: fixed;
+  right: 0rem;
+  display: flex;
+  gap: 1rem;
+  box-shadow: -1rem 0 1rem var(--white);
+}
+
+@media (max-width: 1000px) {
+  .tableCellText {
+    width: 20%;
+  }
+  .tableCellAccessLevel {
+    select {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .tableCellText {
+    width: 15%;
+  }
+  .tableCellAccessLevel {
+    select {
+      width: 55%;
+    }
+  }
+}
+
+@media (max-width: 745px) {
+  .tableCellActions {
+    display: none;
+  }
+
+  .tableCellAccessLevel {
+    select {
+      width: 100%;
+    }
+  }
+  .tableBody:hover {
+    .tableCellAccessLevel {
+      select {
+        width: 55%;
+      }
+    }
+  }
+
+  .tableBody:hover .tableCellActions,
+  .tableBody.show-actions .tableCellActions {
+    display: flex;
+  }
+}

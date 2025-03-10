@@ -1,0 +1,21 @@
+.passwordInputContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  border: 1px solid var(--green-700);
+  border-radius: 4px;
+  background-color: var(--stone-50);
+
+  .input {
+    flex: 1;
+    padding: 0.75rem;
+    background-color: var(--stone-50);
+    border-radius: 4px;
+    &:focus {
+      background-color: var(--stone-50);
+    }
+  }
+  .input::placeholder {
+    color: var(--green-200);
+  }
+}

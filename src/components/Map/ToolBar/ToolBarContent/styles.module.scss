@@ -1,0 +1,43 @@
+.container {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  width: calc(100% - 80px);
+  z-index: -1000;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  border: 1px solid var(--stone-200);
+  border-radius: 4px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+
+  .yearFilterContainer {
+    border-right: 1px solid var(--stone-200);
+  }
+  .areaFilterandControlsContainer {
+    position: relative;
+    display: flex;
+    border-left: 1px solid var(--stone-200);
+  }
+}
+
+@media (max-width: 960px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (max-width: 100px) {
+  .container {
+    display: none;
+  }
+}
+@media (max-height: 216px) {
+  .container {
+    display: none;
+  }
+}

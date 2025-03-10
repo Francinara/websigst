@@ -1,0 +1,25 @@
+.button {
+  border: 0;
+  border-radius: 4px;
+  background-color: var(--green-700);
+  padding: 0.75rem;
+  color: var(--white);
+  transition: filter 0.2s;
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    filter: brightness(1.08);
+  }
+}
+
+.buttonText {
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-wrap: nowrap;
+}

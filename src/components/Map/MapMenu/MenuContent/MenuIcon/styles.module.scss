@@ -1,0 +1,29 @@
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 1px;
+  padding: 7px;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: var(--stone-200);
+    border-radius: 4px;
+  }
+}
+
+.activeButton {
+  background-color: var(--stone-200);
+  border-radius: 4px;
+}
+
+.tooltip {
+  color: var(--white);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  background-color: rgba(100, 100, 100, 0.8);
+}

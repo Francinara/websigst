@@ -1,0 +1,110 @@
+.container {
+  position: absolute;
+  bottom: 36px;
+  right: 0px;
+  display: flex;
+  width: 205px;
+  flex-direction: column;
+  gap: 4px;
+  background-color: var(--white);
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+
+  .header {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .buttonContainer {
+    display: flex;
+    gap: 4px;
+    color: var(--green-700);
+
+    button {
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.iconButton {
+  padding: 4px;
+  &:hover {
+    background-color: var(--stone-100);
+  }
+}
+
+.radioInputContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  input {
+    flex: 1;
+    border-bottom: 2px solid var(--stone-200);
+    width: 4px;
+  }
+
+  button {
+    margin-left: 4px;
+    padding: 4px;
+    color: var(--green-700);
+    border: 1px solid var(--stone-200);
+    border-radius: 4px;
+
+    &:hover {
+      background-color: var(--stone-100);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.coordContainer {
+  display: flex;
+  gap: 12px;
+
+  .filterButton {
+    padding: 4px;
+    border: 1px solid var(--stone-200);
+    border-radius: 4px;
+    color: var(--green-700);
+
+    &:hover {
+      background-color: var(--stone-100);
+    }
+  }
+
+  .isActive {
+    background-color: var(--stone-100);
+  }
+
+  .inputContainer {
+    display: flex;
+    flex: 1;
+    gap: 4px;
+    align-items: center;
+
+    input {
+      flex: 1;
+      width: 4px;
+    }
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}

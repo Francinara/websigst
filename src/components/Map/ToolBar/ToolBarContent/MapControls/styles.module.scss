@@ -1,0 +1,10 @@
+.iconButton {
+  padding: 4px;
+  &:hover {
+    background-color: var(--stone-100);
+  }
+}
+.disabledIconButton {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

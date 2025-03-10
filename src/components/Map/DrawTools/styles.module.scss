@@ -1,0 +1,43 @@
+.button {
+  position: absolute;
+  width: 30px;
+  height: 29px;
+  top: 16px;
+  left: 2px;
+  padding: 5px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  background-color: var(--white);
+  color: #5b5b5b;
+
+  &:hover {
+    background-color: var(--stone-100);
+  }
+}
+
+.disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+  &:hover {
+    background-color: var(--white);
+  }
+}
+
+@media (max-height: 900px) {
+  .button {
+    top: 212px;
+    position: absolute;
+  }
+}
+
+@media (max-height: 740px) {
+  .button {
+    display: none;
+  }
+}
+
+@media (max-width: 586px) {
+  .button {
+    display: none;
+  }
+}

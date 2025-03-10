@@ -1,0 +1,236 @@
+.leaflet-bottom.leaflet-left {
+  bottom: 6px;
+  z-index: 402;
+}
+
+.leaflet-bottom.leaflet-right {
+  display: flex;
+  white-space: nowrap;
+  flex-direction: row-reverse;
+  bottom: -3px;
+  background-color: rgba(256, 256, 256, 0.7);
+  padding: 2px 0px;
+  z-index: 401;
+}
+
+.leaflet-top.leaflet-right.sidebar-visible {
+  z-index: 400;
+}
+
+.map-controls-container {
+  position: absolute;
+  bottom: 24px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.leaflet-control-attribution.leaflet-control {
+  background-color: transparent;
+}
+
+.leaflet-control-scale-line {
+  background-color: transparent;
+  padding-top: 1px;
+  height: 12px;
+  font-size: 9px;
+  text-align: center;
+}
+
+.tool-bar-content.leaflet-control.sidebar-visible {
+  width: calc(100vw - 420px);
+}
+
+.tool-bar-content.leaflet-control {
+  width: 100vw;
+}
+
+.leaflet-pm-toolbar {
+  top: 16px;
+}
+
+.leaflet-pm-toolbar.leaflet-pm-edit.leaflet-bar.leaflet-control,
+.shapefile-download.leaflet-control {
+  z-index: 1;
+}
+
+.leaflet-pm-toolbar.leaflet-pm-draw.leaflet-bar.leaflet-control {
+  z-index: 2;
+}
+
+.custom-menu,
+.leaflet-pm-toolbar,
+.tool-bar-content,
+.shapefile-download,
+.custom-filters,
+.custom-table {
+  left: 50px;
+  z-index: 400;
+}
+
+.custom-table.leaflet-control {
+  width: calc(100vw - 50px);
+}
+
+.sidebar-visible {
+  left: 450px;
+}
+
+//table visible
+.leaflet-bottom.leaflet-right.table-visible {
+  top: calc(100% - 310px);
+}
+.tool-bar-content.leaflet-control.table-visible {
+  top: -290px;
+}
+
+.custom-table.leaflet-control.sidebar-visible {
+  width: calc(100vw - 450px);
+}
+
+//Select ScrollBar
+.scrollable__menu-list::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.scrollable__menu-list:hover::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.scrollable__menu-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollable__menu-list:hover::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scrollable__menu-list::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.scrollable__menu-list:hover::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+}
+
+.scrollable__menu-list::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+@media (max-height: 900px) {
+  .leaflet-pm-toolbar {
+    top: 52px;
+    position: absolute;
+  }
+  .leaflet-pm-edit {
+    left: 86px;
+  }
+}
+
+@media (max-height: 570px) {
+  .map-controls-container {
+    display: none;
+  }
+}
+
+@media (max-height: 615px) {
+  .leaflet-buttons-control-button {
+    border-right: 1px solid var(--stone-300);
+    border-bottom: none !important;
+  }
+}
+
+@media (max-height: 450px) {
+  .map-controls-container {
+    display: flex;
+  }
+}
+
+@media (max-height: 740px) {
+  .leaflet-pm-toolbar {
+    display: none;
+  }
+}
+@media (max-height: 777px) {
+  .custom-legend.leaflet-control.table-visible {
+    display: none;
+  }
+}
+
+@media (max-height: 505px) {
+  .custom-menu.table-visible {
+    visibility: hidden;
+  }
+}
+
+@media (max-height: 330px) {
+  .map-controls-container {
+    display: none;
+  }
+}
+
+@media (max-height: 416px) {
+  .tool-bar-content.table-visible {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 1130px) {
+  .sidebar-visible {
+    left: 50px;
+  }
+  .leaflet-pm-edit.sidebar-visible {
+    left: 85px;
+  }
+  .custom-table.leaflet-control.sidebar-visible {
+    width: calc(100vw - 50px);
+  }
+  .tool-bar-content.leaflet-control.sidebar-visible {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 960px) {
+  .custom-menu,
+  .leaflet-pm-draw,
+  .tool-bar-content,
+  .shapefile-download,
+  .custom-filters,
+  .custom-table {
+    left: 0px;
+  }
+
+  .leaflet-pm-edit {
+    left: 36px;
+  }
+
+  .tool-bar-content {
+    left: -10px;
+  }
+
+  .leaflet-bottom.leaflet-left {
+    bottom: 50px;
+  }
+  .leaflet-bottom.leaflet-right {
+    bottom: 40px;
+  }
+  .custom-table.leaflet-control {
+    width: 100vw;
+  }
+  .custom-table.leaflet-control.sidebar-visible {
+    width: 100vw;
+  }
+  .leaflet-bottom.leaflet-right.table-visible {
+    top: calc(100% - 354px);
+  }
+}
+
+@media (max-width: 586px) {
+  .leaflet-pm-toolbar {
+    display: none;
+  }
+}

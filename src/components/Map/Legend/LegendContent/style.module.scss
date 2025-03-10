@@ -1,0 +1,149 @@
+.container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 8px;
+  background: var(--white);
+  border-radius: 6px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+  color: var(--stone-500);
+  font-family: Roboto;
+}
+
+.header {
+  margin: 0 0 5px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.collapseButtonClose {
+  position: absolute;
+  top: 10px;
+}
+
+.collapseButtonOpen {
+  position: absolute;
+  right: -11px;
+  top: 10px;
+  padding: 12px 4px;
+  background: var(--white);
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    background: var(--stone-100);
+  }
+}
+
+.checkboxContainer {
+  overflow: auto;
+  height: 22.5vh;
+  margin: 4px 0;
+
+  &:hover {
+    .itemCheckbox {
+      display: block;
+    }
+    .checkboxContent,
+    .checkboxContentIndeterminate {
+      padding: 0px;
+    }
+    .lineIcon {
+      display: none;
+    }
+    .textIcon {
+      display: none;
+    }
+    .circleIcon {
+      display: none;
+    }
+  }
+}
+
+.checkboxContent {
+  margin-left: 10px;
+  height: 26px;
+  padding-top: 7px;
+  padding-bottom: 9px;
+  padding-left: 8px;
+  font-size: 12;
+}
+
+.checkboxContentIndeterminate {
+  margin-left: 10px;
+  height: 26px;
+  width: 75px;
+  font-size: 12;
+}
+
+.itemCheckbox {
+  display: none;
+}
+
+.itemCheckboxIndeterminate {
+  display: block;
+}
+
+.radioButtonContainer {
+  border-top: 1px solid var(--stone-300);
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.radioButtonContent {
+  height: 26px;
+}
+
+.item {
+  display: flex;
+  align-items: first baseline;
+}
+
+.roads {
+  .item:last-child {
+    margin-bottom: 8px;
+  }
+}
+
+.lineIcon {
+  padding-left: 10px;
+  width: 18px;
+  height: 4px;
+  margin-left: 8px;
+  border-radius: 2px;
+}
+
+.textIcon {
+  width: 18px;
+  font-weight: 1000;
+  margin-left: 8px;
+  letter-spacing: -1px;
+}
+
+.circleIcon {
+  width: 8px;
+  height: 8px;
+  border-radius: 6px;
+  font-weight: 700;
+  margin-right: 6px;
+  margin-left: 12px;
+}
+
+.expandButton {
+  height: 9px;
+}
+
+// @media (max-height: 450px) {
+//   .container {
+//     display: none;
+//   }
+// }
+
+// @media (max-width: 506px) {
+//   .container,
+//   .collapseButtonOpen {
+//     display: none;
+//   }
+// }

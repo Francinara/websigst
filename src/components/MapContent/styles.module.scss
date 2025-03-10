@@ -1,0 +1,184 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 12px 12px;
+}
+
+.headerContent {
+  margin: 8px 0;
+  display: flex;
+  gap: 8px;
+
+  button {
+    color: var(--green-700);
+  }
+  h2 {
+    font-size: 16px;
+    border-left: 1px solid var(--stone-200);
+    padding-left: 8px;
+  }
+}
+
+.selectContainer {
+  min-width: 224px;
+}
+
+.chartContainer {
+  display: flex;
+  padding: 0 12px 12px;
+  overflow: auto;
+}
+
+.height {
+  height: calc(100vh - 230px);
+}
+
+.heightWhithFilter {
+  height: calc(100vh - 420px);
+}
+
+:fullscreen {
+  .height {
+    height: calc(100vh - 136px);
+  }
+  .heightWhithFilter {
+    height: calc(100vh - 320px);
+  }
+}
+
+.loadingOverlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-top: 16px;
+  justify-content: center;
+  background-color: var(--white);
+  z-index: 1001;
+}
+
+.loaderCircle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--green-700);
+  border-top-color: var(--stone-300);
+  animation: loader-circle 1s linear infinite;
+}
+
+@keyframes loader-circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.chartContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chartGrid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  background-color: var(--stone-50);
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.chartCard {
+  padding: 12px;
+  flex: 1 1 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--white);
+  border-radius: 6px;
+}
+
+.chartTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 11px;
+  height: 33px;
+}
+
+.legendContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.rankingContainer {
+  border: 1px solid var(--stone-200);
+  border-radius: 6px;
+  padding: 12px;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.pieChartContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.box {
+  padding: 12px;
+  flex: 1 1 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.borderBox {
+  flex: 1 1 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid var(--stone-200);
+  border-radius: 6px;
+}
+
+@media (max-width: 900px) {
+  .height {
+    height: calc(100vh - 275px);
+  }
+
+  .heightWhithFilter {
+    height: calc(100vh - 465px);
+  }
+
+  :fullscreen {
+    .height {
+      height: calc(100vh - 179px);
+    }
+    .heightWhithFilter {
+      height: calc(100vh - 365px);
+    }
+  }
+}
+@media (max-width: 420px) {
+  .selectContainer {
+    min-width: 160px;
+  }
+}

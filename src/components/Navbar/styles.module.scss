@@ -1,0 +1,148 @@
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1003;
+  background-color: rgba(256, 256, 256, 0.1);
+  backdrop-filter: blur(1px);
+}
+
+.navbar {
+  width: 100%;
+  height: 100px;
+  padding: 70px 12px 8px;
+  position: fixed;
+  z-index: 1002;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--stone-200);
+}
+
+.navbarLinks {
+  display: flex;
+  gap: 16px;
+}
+
+.navbarLink {
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--stone-400);
+  }
+}
+
+.buttonMobile {
+  display: none;
+  cursor: pointer;
+  color: var(--green-700);
+  transition: trasform 0.8s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.sidebarContainer {
+  width: 288px;
+  height: calc(100vh - 60px);
+  right: 0;
+  position: absolute;
+  z-index: 1004;
+  top: 60px;
+  display: flex;
+  background-color: var(--white);
+  border-left: 1px solid var(--stone-200);
+}
+
+.sidebar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.sidebarHeader {
+  height: 32px;
+  margin: 9px 12px 2px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--stone-200);
+
+  h1 {
+    color: var(--green-700);
+    font-weight: 500;
+    font-size: 1.125rem;
+  }
+}
+
+.sidebarContent {
+  padding-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+.sidebarLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarLink {
+  padding: 8px 12px;
+
+  &:hover {
+    background-color: var(--stone-50);
+  }
+}
+
+.sidebarLinkGreen {
+  margin: 0px 12px;
+  padding: 8px 0px;
+  display: flex;
+  flex-direction: column;
+  color: var(--green-700);
+  border-top: 1px solid var(--stone-200);
+
+  &:hover {
+    font-weight: 500;
+  }
+}
+
+.navbarLink.active {
+  font-weight: bold;
+}
+.sidebarLink.active {
+  background: var(--stone-50);
+}
+
+@media (min-width: 470px) {
+  .sidebarContainer,
+  .overlay {
+    display: none;
+  }
+}
+
+@media (max-width: 470px) {
+  .navbarLinks {
+    display: none;
+  }
+  .navbar {
+    justify-content: end;
+  }
+
+  .buttonMobile {
+    display: flex;
+  }
+}
+
+@media (max-width: 300px) {
+  .sidebarContainer {
+    width: 100%;
+  }
+}
