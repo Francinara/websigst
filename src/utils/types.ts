@@ -6,6 +6,7 @@ import {
   OtherActivitiesProps,
   PropertyProps,
   BeneficiarioProps,
+  WaterResourceProps,
 } from "../contexts/MapContext/types";
 
 export type newPropertyProps = {
@@ -73,7 +74,8 @@ export type CompleteProductiveActivity = AgricultureProps &
   newDataBeekeepingProps &
   newPropertyProps &
   PropertyProps &
-  BeneficiarioProps;
+  BeneficiarioProps &
+  WaterResourceProps;
 
 export type ProductiveActivitiesKeys =
   | keyof AgricultureProps

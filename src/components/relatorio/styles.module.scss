@@ -1,0 +1,38 @@
+.loadingOverlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  z-index: 1001;
+}
+
+.loaderCircle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 4px solid var(--green-700);
+  border-top-color: var(--stone-300);
+  animation: loader-circle 1s linear infinite;
+}
+
+@media (max-width: 865px) {
+  .temporalDataNavbar {
+    display: none;
+  }
+  .temporalDataSelect {
+    display: block;
+  }
+}
+
+@keyframes loader-circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -272,6 +272,7 @@ export default function Home() {
     () => processActivityData(properties),
     [properties]
   );
+
   const processedDataBeneficiarios = useMemo(
     () => processBeneficiarioData(beneficiarios),
     [beneficiarios]

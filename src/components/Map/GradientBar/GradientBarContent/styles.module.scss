@@ -1,7 +1,7 @@
 .container {
   position: absolute;
-  bottom: 18px;
-  right: -76px;
+  bottom: 20px;
+  right: 0;
 }
 
 .gradientBar {
@@ -43,7 +43,6 @@
 @media (max-width: 500px) {
   .container {
     bottom: 60px;
-    right: -76px;
   }
 }
 

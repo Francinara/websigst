@@ -25,7 +25,9 @@ export type BeneficiariesProps = {
   nome_completo: string;
   credito_rural: boolean;
   tipo_credito_rural: string | null;
+  propriedade_id?: number;
 };
+
 export const fetchBeneficiaries = async () => {
   try {
     const response = await api.get<BeneficiariesProps[]>("/beneficiaries");

@@ -48,6 +48,8 @@ export function Navbar() {
   const links = [
     { path: "/", label: "Mapa" },
     // { path: "/relatorio", label: "Visão Geral" },
+    { path: "/dashboard", label: "Dashboard" },
+    { path: "/relatorio", label: "Relatórios" },
     { path: "/temporal-data", label: "Dados Temporais" },
   ];
 

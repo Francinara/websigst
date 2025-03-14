@@ -13,8 +13,8 @@ export function SignIn() {
 
   const { signIn } = useAuth();
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("user@user.br");
+  const [password, setPassword] = useState("123456");
 
   const [loading, setLoading] = useState(false);
 

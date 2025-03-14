@@ -211,8 +211,6 @@ export default function LegendContent() {
   }
 
   useEffect(() => {
-    console.log(window.innerWidth);
-
     if (window.innerWidth <= 960) {
       setIsLegendVisible(false);
     }

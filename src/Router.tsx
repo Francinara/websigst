@@ -10,6 +10,7 @@ import CanAuth from "./utils/canAuth";
 import CanAdmin from "./utils/canAdmin";
 import TemporalData from "./pages/temporal-data";
 import Relatorio from "./pages/relatorio";
+import Dashboard from "./pages/dashboard";
 
 export function Router() {
   const location = useLocation();
@@ -37,6 +38,14 @@ export function Router() {
         element={
           <CanAuth>
             <Relatorio />
+          </CanAuth>
+        }
+      />
+      <Route
+        path="/dashboard"
+        element={
+          <CanAuth>
+            <Dashboard />
           </CanAuth>
         }
       />

@@ -131,7 +131,7 @@ export default function Map() {
           /> */}
           <MapMenu />
           <Legend />
-          {<GradientBar />}
+
           {upload.length > 0 &&
             upload.map((file, i) => {
               return <Shapefile key={i} data={file.feature as any} />;
@@ -139,6 +139,7 @@ export default function Map() {
           <ToolBar />
           <Layers setLoading={setLoading} />
           <ScaleControl position="bottomright" metric={true} imperial={false} />
+          {<GradientBar />}
           <MenuSidebar />
           <BottomNavMenu />
           <ChartsContainer />

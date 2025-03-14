@@ -1,3 +1,7 @@
+.icon {
+  opacity: 0.3;
+}
+
 .legendContainer {
   overflow-y: auto;
   display: flex;
@@ -35,7 +39,7 @@
     text-align: left;
     list-style-type: none;
     margin-bottom: 0;
-    cursor: pointer;
+    cursor: default;
     display: flex;
     align-items: center;
     font-size: 9px;
@@ -66,12 +70,17 @@
   }
   .bar {
     transition: opacity 0.3s ease;
-    cursor: pointer;
+    cursor: default;
   }
   .barLabel {
     font-size: 9px;
     fill: var(--stone-500);
     text-anchor: end;
+  }
+  .verticalBarLabel {
+    font-size: 9px;
+    fill: var(--stone-500);
+    text-anchor: middle;
   }
 }
 
@@ -95,7 +104,7 @@
 
   .bar {
     transition: opacity 0.3s ease;
-    cursor: pointer;
+    cursor: default;
   }
 
   .paginationControls {
@@ -114,7 +123,7 @@
 
 .PieChartContainer {
   transition: opacity 0.3s ease;
-  cursor: pointer;
+  cursor: default;
 
   .slice {
     stroke-width: 1;
@@ -152,7 +161,7 @@
 
   .svgContainer {
     .nav {
-      cursor: pointer;
+      cursor: default;
       transition: opacity 0.3s ease;
 
       .dashedLine {
@@ -187,26 +196,128 @@
   }
 
   .path {
-    cursor: pointer;
+    cursor: default;
     transition: opacity 0.3s ease;
     fill: none;
     stroke-width: 2px;
   }
   .pathDashed {
-    cursor: pointer;
+    cursor: default;
     transition: opacity 0.3s ease;
     fill: none;
     stroke-width: 2px;
     stroke-dasharray: 3px;
   }
   .circle {
-    cursor: pointer;
+    cursor: default;
     transition: opacity 0.3s ease;
   }
   .strokeCircle {
     fill: var(--white);
     stroke-width: 2px;
+    cursor: default;
+    transition: opacity 0.3s ease;
+  }
+}
+
+.chartSVGContainer {
+  display: flex;
+  gap: 12px;
+}
+
+.chartSVGContent {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  background-color: var(--white);
+
+  .chartSVGTitle {
+    padding: 12px;
+
+    text-align: center;
+    font-size: 9px;
+  }
+
+  .chartContainer {
+    width: 100%;
+
+    display: flex;
+  }
+
+  .chartSVGSection {
+    flex: 1 1 0%;
+
+    overflow: hidden;
+  }
+
+  .invisible {
+    max-width: 40px;
+    visibility: hidden;
+
+    flex: 1 1 0%;
+  }
+}
+
+.chartSVG {
+  margin-bottom: 12px;
+
+  .gridLine {
+    stroke: var(--stone-200);
+  }
+
+  .lineLabel {
+    font-size: 9px;
+    fill: var(--stone-500);
+    text-anchor: end;
+  }
+
+  .path {
     cursor: pointer;
     transition: opacity 0.3s ease;
+    fill: none;
+    stroke-width: 2px;
+  }
+
+  .circle {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  .gridText {
+    text-anchor: middle;
+    font-size: 9px;
+    fill: var(--stone-500);
+  }
+}
+
+.lineChratLegendContainer {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-right: 8px;
+  align-items: center;
+
+  li {
+    text-align: left;
+    list-style-type: none;
+    margin-bottom: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 9px;
+    white-space: nowrap;
+
+    span {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+      transition: opacity 0.3s ease;
+    }
+    p {
+      white-space: nowrap;
+      transition: opacity 0.3s ease;
+    }
   }
 }

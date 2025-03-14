@@ -90,6 +90,16 @@ export enum activityMap {
   recursos_hidricos = "Recursos Hídricos",
   dados_socioeconomicos = "Dados Socioeconômicos",
 }
+export enum tableMap {
+  propriedade = "Propriedades",
+  agricultura = "Agricultura",
+  pecuaria = "Pecuária",
+  aquicultura = "Aquicultura",
+  apicultura = "Apicultura",
+  artesanato = "Artesanato",
+  outras_atividades = "Outras Atividades",
+  visitas = "Visitas",
+}
 
 export enum activityAcess {
   agriculture = 1,

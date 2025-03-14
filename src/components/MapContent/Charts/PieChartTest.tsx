@@ -9,6 +9,7 @@ import { CompleteProductiveActivity } from "../../../utils/types";
 
 import styles from "./styles.module.scss";
 import { usePropertyStore } from "../../../store/usePropertyStore";
+import { formatNumber } from "../../../utils/formatUtils";
 
 type ProcessedData = {
   label: string;
@@ -194,7 +195,7 @@ export default function PieChartTest({
                   <span>{percentage.toFixed(2)}%</span>
                   <br />
                   <span>
-                    {d.data.label}:{d.data.value} {label}
+                    {d.data.label}: {formatNumber(d.data.value, 0)} {label}
                   </span>
                 </>
               }

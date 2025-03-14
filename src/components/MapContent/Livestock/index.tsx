@@ -285,7 +285,7 @@ export default function Livestock() {
                     VisibilityOptionsAgriculture={
                       VisibilityOptionsAgriculture.Production
                     }
-                    label="Arrobas"
+                    label="Animias"
                   />
                 </div>
 
@@ -343,7 +343,7 @@ export default function Livestock() {
                   selectedChart={selectedChart}
                   setSelectedChart={setSelectedChart}
                   countKey="quantidade"
-                  label="Arrobas"
+                  label="Animais"
                 />
               </div>
 
@@ -412,7 +412,7 @@ export default function Livestock() {
                           : item.destinacao_venda
                       )
                     }
-                    label="Arrobas"
+                    label="Animais"
                   />
                 </div>
                 <div className={styles.borderBox}>

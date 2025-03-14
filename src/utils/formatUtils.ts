@@ -1,3 +1,10 @@
+export const formatNumber = (value: number, decimals: number = 2) => {
+  return new Intl.NumberFormat("pt-BR", {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  }).format(value);
+};
+
 export function formatValue(value: number): string {
   if (value == null) {
     return "N/A";

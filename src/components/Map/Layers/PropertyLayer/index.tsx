@@ -2,7 +2,7 @@ import { PropertyProps } from "../../../../contexts/MapContext/types";
 import { Marker, Popup } from "react-leaflet";
 import * as L from "leaflet";
 import greenPinImage from "../../../../assets/green_pin.png";
-import redPinImage from "../../../../assets/red_pin.png";
+// import redPinImage from "../../../../assets/red_pin.png";
 import shadowImage from "../../../../assets/shadow.png";
 import { ModalPropertyInfo } from "../../ModalPropertyInfo";
 import { useEffect, useState } from "react";
@@ -32,21 +32,21 @@ const customIcon = new L.Icon({
   shadowAnchor: [4, 11],
   popupAnchor: [0, -10],
 });
-const customIconRed = new L.Icon({
-  iconUrl: redPinImage,
-  shadowUrl: shadowImage,
-  iconSize: [20, 30],
-  shadowSize: [20, 10],
-  iconAnchor: [10, 32],
-  shadowAnchor: [4, 11],
-  popupAnchor: [0, -10],
-});
+// const customIconRed = new L.Icon({
+//   iconUrl: redPinImage,
+//   shadowUrl: shadowImage,
+//   iconSize: [20, 30],
+//   shadowSize: [20, 10],
+//   iconAnchor: [10, 32],
+//   shadowAnchor: [4, 11],
+//   popupAnchor: [0, -10],
+// });
 
 export function PropertyLayer({ properties }: { properties: PropertyProps[] }) {
   const { isDrawToolsVisible, isAreaFilterVisible } = useUIStore();
 
   const {
-    property: currentProperty,
+    // property: currentProperty,
     updateProperty,
     propertiesID,
   } = usePropertyStore();
@@ -92,9 +92,7 @@ export function PropertyLayer({ properties }: { properties: PropertyProps[] }) {
             interactive={!isDrawToolsVisible && !isAreaFilterVisible}
             key={`${property.id}-${isDrawToolsVisible}-${isAreaFilterVisible}`}
             position={[position[1], position[0]]}
-            icon={
-              currentProperty?.id === property.id ? customIconRed : customIcon
-            }
+            icon={customIcon}
             pmIgnore={true}
             eventHandlers={{
               mouseover: (e) => {
