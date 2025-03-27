@@ -32,7 +32,7 @@ export const activityOptions = [
     value: tableMap.propriedade,
     label: (
       <div className={styles.activityOptions}>
-        <House size={20} weight="bold" /> {tableMap.agricultura}
+        <House size={20} weight="bold" /> {tableMap.propriedade}
       </div>
     ),
     icon: <House size={20} weight="bold" />,
@@ -104,6 +104,7 @@ export const activityOptions = [
 
 const Relatorio = () => {
   const [selectedOption, setSelectedOption] = useState(activityOptions[0]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const contentRef = useRef<HTMLDivElement>(null);
   const reactToPrintFn = useReactToPrint({ contentRef });
@@ -155,53 +156,59 @@ const Relatorio = () => {
               />
             </nav>
             <div ref={contentRef} className={styles.temporalDataSection}>
-              <header className="flex gap-4">
+              <header className="flex gap-4 items-center">
                 <h1> {selectedOption.value}</h1>
-                <Tooltip title="Imprimir Tabela">
-                  <button onClick={() => reactToPrintFn()}>
-                    <Printer size={28} />
-                  </button>
-                </Tooltip>
+                {isLoading ? (
+                  <div className={styles.loadingOverlay}>
+                    <div className={styles.loaderCircle}></div>
+                  </div>
+                ) : (
+                  <Tooltip title="Imprimir Tabela">
+                    <button onClick={() => reactToPrintFn()}>
+                      <Printer size={28} />
+                    </button>
+                  </Tooltip>
+                )}
               </header>
               <div className={styles.content}>
                 {selectedOption.value === tableMap.propriedade && (
                   <>
-                    <PropertyWithBeneficiaryTable />
+                    <PropertyWithBeneficiaryTable setIsLoading={setIsLoading} />
                   </>
                 )}
                 {selectedOption.value === tableMap.agricultura && (
                   <>
-                    <AgricultureTable />
+                    <AgricultureTable setIsLoading={setIsLoading} />
                   </>
                 )}
                 {selectedOption.value === tableMap.pecuaria && (
                   <>
-                    <LivestockTable />
+                    <LivestockTable setIsLoading={setIsLoading} />
                   </>
                 )}
                 {selectedOption.value === tableMap.apicultura && (
                   <>
-                    <BeekeepingTable />
+                    <BeekeepingTable setIsLoading={setIsLoading} />
                   </>
                 )}
                 {selectedOption.value === tableMap.artesanato && (
                   <>
-                    <CraftsmanshipTable />
+                    <CraftsmanshipTable setIsLoading={setIsLoading} />
                   </>
                 )}
                 {selectedOption.value === tableMap.outras_atividades && (
                   <>
-                    <OtherActivitiesTable />
+                    <OtherActivitiesTable setIsLoading={setIsLoading} />
                   </>
                 )}
                 {selectedOption.value === tableMap.aquicultura && (
                   <>
-                    <AquacultureTable />
+                    <AquacultureTable setIsLoading={setIsLoading} />
                   </>
                 )}
                 {selectedOption.value === tableMap.visitas && (
                   <>
-                    <VisitsTable />
+                    <VisitsTable setIsLoading={setIsLoading} />
                   </>
                 )}
               </div>

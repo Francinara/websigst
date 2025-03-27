@@ -4,9 +4,12 @@ import {
   ProductiveActivityProps,
 } from "../services/productive-activities/productiveActivitiesApi";
 
-export const useProductiveActivities = (activity: number) => {
+export const useProductiveActivities = (
+  activity: number,
+  filters: Record<string, string | number | boolean | undefined> = {}
+) => {
   return useQuery<ProductiveActivityProps, Error>({
-    queryKey: ["productive-activities", activity],
-    queryFn: () => fetchProductiveActivitiesByActivity(activity),
+    queryKey: ["productive-activities", activity, filters],
+    queryFn: () => fetchProductiveActivitiesByActivity(activity, filters),
   });
 };

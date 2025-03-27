@@ -12,7 +12,7 @@ export type AgricultureProps = {
   valor_comercializado: number;
   cultura: string;
   propriedade_id: number;
-  data: number;
+  data: string; // Corrigido para string (vem como ISO do backend)
   visita_id: number;
   distrito: string;
 };
@@ -33,7 +33,7 @@ export type AquacultureProps = {
   destinacao_casa: number;
   destinacao_verda: number;
   propriedade_id: number;
-  data: number;
+  data: string;
   visita_id: number;
   distrito: string;
 };
@@ -47,7 +47,7 @@ export type BeekeepingProps = {
   propriedade_id: number;
   com_ferrao: boolean;
   sem_ferrao: boolean;
-  data: number;
+  data: string;
   visita_id: number;
   distrito: string;
 };
@@ -67,7 +67,7 @@ export type LivestockProps = {
   valor_comercializacao: number;
   destinacao_venda: number;
   propriedade_id: number;
-  data: number;
+  data: string;
   visita_id: number;
   distrito: string;
 };
@@ -77,16 +77,17 @@ export type CraftsmanshipProps = {
   produto: string;
   destinacao_valor: string;
   propriedade_id: number;
-  data: number;
+  data: string;
   visita_id: number;
   distrito: string;
 };
+
 export type OtherActivitiesProps = {
   id: number;
   tipo: string;
   descricao: string;
   propriedade_id: number;
-  data: number;
+  data: string;
   visita_id: number;
   distrito: string;
 };
@@ -99,12 +100,15 @@ export type ProductiveActivityProps =
   | CraftsmanshipProps[]
   | OtherActivitiesProps[];
 
-export const fetchProductiveActivitiesByActivity = async (activity: number) => {
+export const fetchProductiveActivitiesByActivity = async (
+  activity: number,
+  filters: Record<string, string | number | boolean | undefined> = {}
+) => {
   try {
     const response = await api.get<ProductiveActivityProps>(
       "/productive-activity/activity",
       {
-        params: { activity },
+        params: { activity, ...filters },
       }
     );
     return response.data;

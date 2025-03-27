@@ -1,3 +1,52 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--stone-200);
+}
+
+.tableHeader {
+  background-color: var(--stone-100);
+}
+
+.tableCell {
+  border: 1px solid #e7e5e4;
+  padding: 0.5rem;
+}
+
+.tableCellHeader {
+  border-top: 1px solid #e7e5e4;
+  border-left: 1px solid #e7e5e4;
+  border-right: 1px solid #e7e5e4;
+  padding: 0.5rem;
+}
+
+.filterCell {
+  border-left: 1px solid #e7e5e4;
+  border-right: 1px solid #e7e5e4;
+  padding: 0.25rem;
+}
+
+.inputFilter {
+  width: 100%;
+  padding: 0.25rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  font-weight: normal;
+}
+
+.selectFilter {
+  width: 100%;
+  padding: 0.25rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  font-weight: normal;
+}
+
+.tableRow {
+  text-align: center;
+  border: 1px solid #e7e5e4;
+}
+
 .loadingOverlay {
   top: 0;
   left: 0;
@@ -17,15 +66,6 @@
   border: 4px solid var(--green-700);
   border-top-color: var(--stone-300);
   animation: loader-circle 1s linear infinite;
-}
-
-@media (max-width: 865px) {
-  .temporalDataNavbar {
-    display: none;
-  }
-  .temporalDataSelect {
-    display: block;
-  }
 }
 
 @keyframes loader-circle {
